@@ -1,0 +1,18 @@
+{
+  "block.testmod.angband_cobble": "angband_cobble",
+  "block.testmod.angband_ore": "angband_ore",
+  "block.testmod.angband_stone": "angband_stone",
+  "block.testmod.deepslate_mithril_ore": "deep_mithril_ore",
+  "block.testmod.ironwood_log": "ironwood_log",
+  "block.testmod.mithril_cobble": "mithril_cobble",
+  "block.testmod.mithril_leaves": "mithril_leaves",
+  "block.testmod.mithril_log": "mithril_log",
+  "block.testmod.mithril_ore": "mithril_ore",
+  "block.testmod.mithril_stone": "mithril_stone",
+  "block.testmod.mordor_cobble": "mordor_cobble",
+  "block.testmod.mordor_ore": "mordor_ore",
+  "block.testmod.mordor_stone": "mordor_stone",
+  "block.testmod.silver_leaves": "silver_leaves",
+  "block.testmod.silver_log": "silver_log",
+  "item.testmod.mithril_item": "mithril_item"
+}

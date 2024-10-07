@@ -1,0 +1,20 @@
+{
+  "values": [
+    "testmod:angband_ore",
+    "testmod:angband_stone",
+    "testmod:angband_cobble",
+    "testmod:mithril_ore",
+    "testmod:mithril_cobble",
+    "testmod:mithril_stone",
+    "testmod:mordor_ore",
+    "testmod:mordor_cobble",
+    "testmod:mithril_log",
+    "testmod:mithril_leaves",
+    "testmod:silver_log",
+    "testmod:silver_leaves",
+    "testmod:ironwood_log",
+    "testmod:irnwood_leaves",
+    "testmod:deepslate_mithril_ore",
+    "testmod:mordor_stone"
+  ]
+}
