@@ -36,6 +36,9 @@ public class TestModEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockInit.MITHRIL_ORE, "mithril_ore");
         translationBuilder.add(BlockInit.MITHRIL_COBBLE, "mithril_cobble");
         translationBuilder.add(BlockInit.MITHRIL_STONE,"mithril_stone");
+        translationBuilder.add(BlockInit.MITHRIL_BRICK,"mithirl_brick");
+        translationBuilder.add(BlockInit.DWARF_STONE,"dwarf_stone");
+        translationBuilder.add(BlockInit.DWARF_BRICK, "dwarf_brick");
         translationBuilder.add(BlockInit.MORDOR_ORE,"mordor_ore");
         translationBuilder.add(BlockInit.MORDOR_COBBLE,"mordor_cobble");
         translationBuilder.add(BlockInit.MORDOR_STONE, "mordor_stone");
@@ -44,6 +47,8 @@ public class TestModEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockInit.SILVER_LOG,"silver_log");
         translationBuilder.add(BlockInit.SILVER_LEAVES,"silver_leaves");
         translationBuilder.add(BlockInit.IRONWOOD_LOG,"ironwood_log");
+        translationBuilder.add(BlockInit.EVILWOOD_LOG,"evilwood_log");
+        translationBuilder.add(BlockInit.EVIL_LEAVES, "evil_leaves");
         translationBuilder.add(BlockInit.DEEPSLATE_MITHRIL_ORE, "deep_mithril_ore");
 
     }

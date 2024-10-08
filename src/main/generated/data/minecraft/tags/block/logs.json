@@ -2,6 +2,8 @@
   "values": [
     "testmod:silver_log",
     "testmod:ironwood_log",
+    "testmod:evilwood_log",
+    "testmod:sunelf_log",
     "testmod:mithril_log"
   ]
 }

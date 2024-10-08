@@ -18,9 +18,12 @@ public class TestModModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MITHRIL_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MITHRIL_COBBLE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MITHRIL_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MITHRIL_BRICK);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ANGBAND_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ANGBND_COBBLE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ANGBAND_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARF_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARF_BRICK);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MORDOR_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MORDOR_COBBLE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MORDOR_STONE);
@@ -33,12 +36,23 @@ public class TestModModModelProvider extends FabricModelProvider {
                 .log(BlockInit.SILVER_LOG);
         blockStateModelGenerator.registerLog(BlockInit.IRONWOOD_LOG)
                 .log(BlockInit.IRONWOOD_LOG);
+        blockStateModelGenerator.registerLog(BlockInit.SUNELF_LOG)
+                .log(BlockInit.SUNELF_LOG);
+        blockStateModelGenerator.registerLog(BlockInit.EVILWOOD_LOG)
+                .log(BlockInit.EVILWOOD_LOG);
+
+
+
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MITHRIL_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.IRONWOOD_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.SILVER_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.EVIL_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.SUNELF_LEAVES);
         blockStateModelGenerator.registerTintableCross(BlockInit.MITHRIL_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(BlockInit.SILVER_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(BlockInit.IRONWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(BlockInit.EVIL_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(BlockInit.SUNELF_SAPLING,BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

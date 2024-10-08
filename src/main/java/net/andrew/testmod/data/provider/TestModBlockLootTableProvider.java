@@ -17,6 +17,7 @@ public class TestModBlockLootTableProvider extends FabricBlockLootTableProvider 
     public void generate() {
         addDrop(BlockInit.ANGBAND_ORE);
         addDrop(BlockInit.ANGBAND_STONE);
+        addDrop(BlockInit.DWARF_STONE);
         addDrop(BlockInit.ANGBND_COBBLE);
         addDrop(BlockInit.MITHRIL_COBBLE);
         addDrop(BlockInit.MITHRIL_ORE);
@@ -28,6 +29,10 @@ public class TestModBlockLootTableProvider extends FabricBlockLootTableProvider 
         addDrop(BlockInit.SILVER_LEAVES);
         addDrop(BlockInit.SILVER_LOG);
         addDrop(BlockInit.IRONWOOD_LOG);
+        addDrop(BlockInit.EVILWOOD_LOG);
+        addDrop(BlockInit.SUNELF_LOG);
+        addDrop(BlockInit.DWARF_BRICK);
+        addDrop(BlockInit.MITHRIL_BRICK);
         addDrop(BlockInit.DEEPSLATE_MITHRIL_ORE);
 
     }

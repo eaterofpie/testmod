@@ -22,8 +22,11 @@ public class TestModBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(BlockInit.MITHRIL_ORE)
                 .add(BlockInit.MITHRIL_COBBLE)
                 .add(BlockInit.MITHRIL_STONE)
+                .add(BlockInit.MITHRIL_BRICK)
                 .add(BlockInit.MORDOR_ORE)
                 .add(BlockInit.MORDOR_COBBLE)
+                .add(BlockInit.DWARF_STONE)
+                .add(BlockInit.DWARF_BRICK)
                 .add(BlockInit.MITHRIL_LOG)
                 .add(BlockInit.MITHRIL_LEAVES)
                 .add(BlockInit.SILVER_LOG)
@@ -40,11 +43,15 @@ public class TestModBlockTagProvider extends FabricTagProvider.BlockTagProvider 
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(BlockInit.SILVER_LEAVES)
                 .add(BlockInit.IRONWOOD_LEAVES)
+                .add(BlockInit.EVIL_LEAVES)
                 .add(BlockInit.MITHRIL_LEAVES);
         getOrCreateTagBuilder(BlockTags.LOGS)
                 .add(BlockInit.SILVER_LOG)
                 .add(BlockInit.IRONWOOD_LOG)
+                .add(BlockInit.EVILWOOD_LOG)
+                .add(BlockInit.SUNELF_LOG)
                 .add(BlockInit.MITHRIL_LOG);
+
 
 
 
