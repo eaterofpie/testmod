@@ -36,6 +36,7 @@ public class TestModEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockInit.MITHRIL_ORE, "mithril_ore");
         translationBuilder.add(BlockInit.MITHRIL_COBBLE, "mithril_cobble");
         translationBuilder.add(BlockInit.MITHRIL_STONE,"mithril_stone");
+        translationBuilder.add(BlockInit.DWARF_STONE,"dwarf_stone");
         translationBuilder.add(BlockInit.MORDOR_ORE,"mordor_ore");
         translationBuilder.add(BlockInit.MORDOR_COBBLE,"mordor_cobble");
         translationBuilder.add(BlockInit.MORDOR_STONE, "mordor_stone");

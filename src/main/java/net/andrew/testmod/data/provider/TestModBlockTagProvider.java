@@ -24,6 +24,7 @@ public class TestModBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(BlockInit.MITHRIL_STONE)
                 .add(BlockInit.MORDOR_ORE)
                 .add(BlockInit.MORDOR_COBBLE)
+                .add(BlockInit.DWARF_STONE)
                 .add(BlockInit.MITHRIL_LOG)
                 .add(BlockInit.MITHRIL_LEAVES)
                 .add(BlockInit.SILVER_LOG)

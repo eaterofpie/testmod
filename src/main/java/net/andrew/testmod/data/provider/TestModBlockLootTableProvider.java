@@ -17,6 +17,7 @@ public class TestModBlockLootTableProvider extends FabricBlockLootTableProvider 
     public void generate() {
         addDrop(BlockInit.ANGBAND_ORE);
         addDrop(BlockInit.ANGBAND_STONE);
+        addDrop(BlockInit.DWARF_STONE);
         addDrop(BlockInit.ANGBND_COBBLE);
         addDrop(BlockInit.MITHRIL_COBBLE);
         addDrop(BlockInit.MITHRIL_ORE);

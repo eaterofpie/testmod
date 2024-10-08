@@ -22,7 +22,9 @@ import net.minecraft.world.gen.trunk.DarkOakTrunkPlacer;
 import java.util.List;
 
 public class ConfiguredFeatureInit {
+
     public static final RegistryKey<ConfiguredFeature<?, ?>> OVERWORLD_MITHRIL_ORE_KEY = registerKey("overworld_mithril_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DWARF_STONE_KEY = registerKey("dwarf_stone_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> NETHER_ANGBAND_ORE_KEY = registerKey("nether_angband_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> END_MORDOR_ORE_KEY = registerKey("end_mordor_ore");
 
@@ -40,6 +42,7 @@ public class ConfiguredFeatureInit {
 
         List<OreFeatureConfig.Target> overworldMithrilTargets = List.of(
                 OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.MITHRIL_ORE.getDefaultState()),
+                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.DWARF_STONE.getDefaultState()),
                 OreFeatureConfig.createTarget(deepslateOreReplaceables, BlockInit.DEEPSLATE_MITHRIL_ORE.getDefaultState()));
 
         List<OreFeatureConfig.Target> netherAngbandTargets = List.of(
@@ -49,6 +52,7 @@ public class ConfiguredFeatureInit {
                 OreFeatureConfig.createTarget(endOreReplaceables, BlockInit.MORDOR_ORE.getDefaultState()));
 
         register(context, OVERWORLD_MITHRIL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 9));
+        register(context, DWARF_STONE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets,8));
         register(context, NETHER_ANGBAND_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherAngbandTargets, 9));
         register(context, END_MORDOR_ORE_KEY, Feature.ORE, new OreFeatureConfig(endExampleTargets, 9));
 

@@ -23,7 +23,7 @@ public class BlockInit {
     public static final Block MORDOR_COBBLE =registerWithItem("mordor_cobble", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 8)));
     public static final Block MORDOR_STONE =registerWithItem("mordor_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 8)));
     public static final Block DEEPSLATE_MITHRIL_ORE =registerWithItem("deepslate_mithril_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 8)));
-
+    public static final Block DWARF_STONE =registerWithItem("dwarf_stone", new Block(AbstractBlock.Settings.create().strength(1.4F).requiresTool()));
     public static final Block MITHRIL_LOG = registerWithItem("mithril_log", Blocks.createLogBlock(MapColor.TERRACOTTA_LIGHT_BLUE, MapColor.WHITE));
     public static final Block SILVER_LOG = registerWithItem("silver_log", Blocks.createLogBlock(MapColor.GRAY, MapColor.STONE_GRAY));
     public static final Block IRONWOOD_LOG = registerWithItem("ironwood_log", Blocks.createLogBlock(MapColor.GRAY, MapColor.STONE_GRAY));

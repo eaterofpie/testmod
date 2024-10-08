@@ -21,6 +21,7 @@ public class TestModModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ANGBAND_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ANGBND_COBBLE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ANGBAND_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARF_STONE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MORDOR_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MORDOR_COBBLE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MORDOR_STONE);
