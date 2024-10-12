@@ -4,8 +4,8 @@ package net.andrew.testmod;
 import net.andrew.testmod.init.BlockInit;
 import net.andrew.testmod.init.ItemGroupInit;
 import net.andrew.testmod.init.ItemInit;
-import net.andrew.testmod.init.worldgen.Biome.TestBiomesInit;
-import net.andrew.testmod.init.worldgen.Biome.TestmodBiomeTagProvider;
+import net.andrew.testmod.init.worldgen.Biome.BiomesInit;
+import net.andrew.testmod.sound.SoundsInit;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 
@@ -21,8 +21,9 @@ public class TestMod implements ModInitializer {
 		ItemInit.load();
 		BlockInit.load();
 		ItemGroupInit.load();
-		TestBiomesInit.load();
-		TestmodBiomeTagProvider.load();
+		BiomesInit.load();
+		SoundsInit.load();
+
 
 
 		LOGGER.info("Loading...");

@@ -23,20 +23,8 @@ public class OverworldRegionInit extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube,
             RegistryKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, TestBiomesInit.CRYSTAL_BIOME);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.PLAINS, TestBiomesInit.ORC_PLAINS);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JAGGED_PEAKS, TestBiomesInit.IORNDWARF_JAGGED);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JAGGED_PEAKS, TestBiomesInit.BLACKROCK_JAGGED);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JAGGED_PEAKS, TestBiomesInit.Gryphon_Mountains);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.PLAINS, TestBiomesInit.BREE_PLAINS);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, TestBiomesInit.DARKELF_FOREST);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, TestBiomesInit.TEROKKAR_FOREST);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, TestBiomesInit.TREE_FOLK);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, TestBiomesInit.DUSKWOOD);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JUNGLE, TestBiomesInit.DUSTWALLOW);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, TestBiomesInit.TROLL_LAND);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, TestBiomesInit.TREE_ELF);
-
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.CRYSTAL_BIOME);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.PLAINS, BiomesInit.ORC_PLAINS);
 
 
 
