@@ -30,7 +30,8 @@ public static final RegistryKey<Biome> CRYSTAL_BIOME = RegistryKey.of(RegistryKe
             Identifier.of(TestMod.MOD_ID, "dwarf_lands"));
     public static final RegistryKey<Biome> DWARF_KINGDOM = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(TestMod.MOD_ID, "dwarf_kingdom"));
-
+    public static final RegistryKey<Biome> DWARF_FARMES = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "dwarf_farmes"));
 
 
 
@@ -41,6 +42,7 @@ public static final RegistryKey<Biome> CRYSTAL_BIOME = RegistryKey.of(RegistryKe
     context.register(DWARF_MINES, dwarf_mines(context));
     context.register(DWARF_LANDS, dwarf_lands(context));
     context.register(DWARF_KINGDOM, dwarf_kingdom(context));
+    context.register(DWARF_FARMES, dwarf_farms(context));
 
 
 }
@@ -265,6 +267,40 @@ public static Biome dwarf_kingdom(Registerable<Biome> context) {
                     .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
             .build();
 }
+    public static Biome dwarf_farms(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(0x7f03fc)
+                        .foliageColor(0xd203fc)
+                        .fogColor(0x22a1e6)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
     public static void load() {
 
     }

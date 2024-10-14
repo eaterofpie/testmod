@@ -26,6 +26,9 @@ public class OverworldRegionInit extends Region {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.CRYSTAL_BIOME);
         });
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.DWARF_FARMES);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.ORC_FOREST);
         });
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
