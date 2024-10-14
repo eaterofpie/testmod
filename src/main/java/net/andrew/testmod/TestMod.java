@@ -25,6 +25,7 @@ public class TestMod implements ModInitializer {
 		ItemGroupInit.load();
 		BiomesInit.load();
 		BiomeModificationInit.load();
+
 		SoundsInit.load();
 
 

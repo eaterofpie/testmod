@@ -30,6 +30,16 @@ public class OverworldRegionInit extends Region {
         });
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JAGGED_PEAKS, BiomesInit.MORDOR_LANDS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JAGGED_PEAKS, BiomesInit.DWARF_MINES);
+
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.DWARF_LANDS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JAGGED_PEAKS, BiomesInit.DWARF_KINGDOM);
 
 
 

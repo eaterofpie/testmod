@@ -24,8 +24,12 @@ public static final RegistryKey<Biome> CRYSTAL_BIOME = RegistryKey.of(RegistryKe
             Identifier.of(TestMod.MOD_ID, "orc_forest"));
     public static final RegistryKey<Biome> MORDOR_LANDS = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(TestMod.MOD_ID, "mordor_lands"));
-
-
+    public static final RegistryKey<Biome> DWARF_MINES = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "dwarf_mines"));
+    public static final RegistryKey<Biome> DWARF_LANDS = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "dwarf_lands"));
+    public static final RegistryKey<Biome> DWARF_KINGDOM = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "dwarf_kingdom"));
 
 
 
@@ -34,6 +38,9 @@ public static final RegistryKey<Biome> CRYSTAL_BIOME = RegistryKey.of(RegistryKe
     context.register(CRYSTAL_BIOME, crystal_biome(context));
     context.register(ORC_FOREST, orc_forest (context));
     context.register(MORDOR_LANDS, mordor_lands(context)) ;
+    context.register(DWARF_MINES, dwarf_mines(context));
+    context.register(DWARF_LANDS, dwarf_lands(context));
+    context.register(DWARF_KINGDOM, dwarf_kingdom(context));
 
 
 }
@@ -153,7 +160,111 @@ public static Biome crystal_biome(Registerable<Biome> context) {
                         .moodSound(BiomeMoodSound.CAVE)
                         .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
                 .build();
+
     }
+public static Biome dwarf_mines(Registerable<Biome> context) {
+    SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+    spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+    DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+    DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+    GenerationSettings.LookupBackedBuilder biomeBuilder =
+            new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                    context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+    globalOverworldGeneration(biomeBuilder);
+    DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+    DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+    DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+    return new Biome.Builder()
+            .precipitation(true)
+            .downfall(0.4f)
+            .temperature(0.7f)
+            .generationSettings(biomeBuilder.build())
+            .spawnSettings(spawnBuilder.build())
+            .effects((new BiomeEffects.Builder())
+                    .waterColor(0xe82e3b)
+                    .waterFogColor(0xbf1b26)
+                    .skyColor(0x30c918)
+                    .grassColor(0x7f03fc)
+                    .foliageColor(0xd203fc)
+                    .fogColor(0x22a1e6)
+                    .moodSound(BiomeMoodSound.CAVE)
+                    .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+            .build();
+}
+public static Biome dwarf_lands(Registerable<Biome> context) {
+    SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+    spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+    DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+    DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+    GenerationSettings.LookupBackedBuilder biomeBuilder =
+            new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                    context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+    globalOverworldGeneration(biomeBuilder);
+    DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+    DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+    DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+    return new Biome.Builder()
+            .precipitation(true)
+            .downfall(0.4f)
+            .temperature(0.7f)
+            .generationSettings(biomeBuilder.build())
+            .spawnSettings(spawnBuilder.build())
+            .effects((new BiomeEffects.Builder())
+                    .waterColor(0xe82e3b)
+                    .waterFogColor(0xbf1b26)
+                    .skyColor(0x30c918)
+                    .grassColor(0x7f03fc)
+                    .foliageColor(0xd203fc)
+                    .fogColor(0x22a1e6)
+                    .moodSound(BiomeMoodSound.CAVE)
+                    .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+            .build();
+}
+
+public static Biome dwarf_kingdom(Registerable<Biome> context) {
+    SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+    spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+    DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+    DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+    GenerationSettings.LookupBackedBuilder biomeBuilder =
+            new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                    context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+    globalOverworldGeneration(biomeBuilder);
+    DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+    DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+    DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+    return new Biome.Builder()
+            .precipitation(true)
+            .downfall(0.4f)
+            .temperature(0.7f)
+            .generationSettings(biomeBuilder.build())
+            .spawnSettings(spawnBuilder.build())
+            .effects((new BiomeEffects.Builder())
+                    .waterColor(0xe82e3b)
+                    .waterFogColor(0xbf1b26)
+                    .skyColor(0x30c918)
+                    .grassColor(0x7f03fc)
+                    .foliageColor(0xd203fc)
+                    .fogColor(0x22a1e6)
+                    .moodSound(BiomeMoodSound.CAVE)
+                    .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+            .build();
+}
     public static void load() {
 
     }
