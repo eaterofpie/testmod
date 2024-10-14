@@ -27,7 +27,9 @@ public class OverworldRegionInit extends Region {
         });
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.ORC_FOREST);
-
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JAGGED_PEAKS, BiomesInit.MORDOR_LANDS);
 
 
 
