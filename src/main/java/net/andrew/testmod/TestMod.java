@@ -5,8 +5,10 @@ import net.andrew.testmod.init.BlockInit;
 import net.andrew.testmod.init.ItemGroupInit;
 import net.andrew.testmod.init.ItemInit;
 import net.andrew.testmod.init.worldgen.Biome.BiomesInit;
+import net.andrew.testmod.init.worldgen.BiomeModificationInit;
 import net.andrew.testmod.sound.SoundsInit;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModification;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
@@ -22,6 +24,7 @@ public class TestMod implements ModInitializer {
 		BlockInit.load();
 		ItemGroupInit.load();
 		BiomesInit.load();
+		BiomeModificationInit.load();
 		SoundsInit.load();
 
 

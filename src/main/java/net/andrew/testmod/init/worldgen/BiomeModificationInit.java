@@ -24,7 +24,7 @@ public class BiomeModificationInit {
         BiomeModifications.addFeature(
                 BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
                 GenerationStep.Feature.VEGETAL_DECORATION,
-                PlacedFeatureInit.MITHRIL_TREE_KEY
+                PlacedFeatureInit.SUNELF_TREE_KEY
         );
         BiomeModifications.addFeature(
                 BiomeSelectors.includeByKey(BiomeKeys.JAGGED_PEAKS),

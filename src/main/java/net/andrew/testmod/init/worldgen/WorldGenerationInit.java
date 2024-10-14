@@ -5,5 +5,7 @@ public class WorldGenerationInit {
         OreGenerationInit.generateOres();
 
         TreeGenerationInit.generateTrees();
+
+
     }
 }

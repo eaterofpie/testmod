@@ -24,7 +24,9 @@ public class OverworldRegionInit extends Region {
             RegistryKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.CRYSTAL_BIOME);
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.PLAINS, BiomesInit.ORC_PLAINS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.ORC_FOREST);
 
 
 

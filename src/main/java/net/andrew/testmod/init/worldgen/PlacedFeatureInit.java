@@ -57,22 +57,22 @@ public class PlacedFeatureInit {
 
         register(context, SILVER_TREE_KEY, registryLookup.getOrThrow(ConfiguredFeatureInit.SILVER_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(7, 0.2f, 3),
+                        PlacedFeatures.createCountExtraModifier(20, 0.2f, 3),
                         BlockInit.SILVER_SAPLING));
 
         register(context, IRONWOOD_TREE_KEY, registryLookup.getOrThrow(ConfiguredFeatureInit.IRONWOOD_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(9, 0.2f, 3),
+                        PlacedFeatures.createCountExtraModifier(20, 0.2f, 3),
                         BlockInit.IRONWOOD_SAPLING));
 
         register(context, EVIL_TREE_KEY, registryLookup.getOrThrow(ConfiguredFeatureInit.EVIL_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(7, 0.2f, 3),
+                        PlacedFeatures.createCountExtraModifier(20, 0.2f, 3),
                         BlockInit.EVIL_SAPLING));
 
         register(context, SUNELF_TREE_KEY, registryLookup.getOrThrow(ConfiguredFeatureInit.SUNELF_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                        PlacedFeatures.createCountExtraModifier(10, 0.2f, 3),
+                        PlacedFeatures.createCountExtraModifier(20, 0.2f, 3),
                         BlockInit.SUNELF_SAPLING));
     }
 
