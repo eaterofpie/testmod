@@ -19,6 +19,17 @@ public class TestModBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(BlockInit.ANGBAND_ORE)
                 .add(BlockInit.ANGBAND_STONE)
                 .add(BlockInit.ANGBND_COBBLE)
+                .add(BlockInit.ELF_STONE)
+                .add(BlockInit.HOBBIT_ORE)
+                .add(BlockInit.DROW_STONE)
+                .add(BlockInit.DROW_COBBLE)
+                .add(BlockInit.DROW_BRICK)
+                .add(BlockInit.ORC_STONE)
+                .add(BlockInit.ORC_COBBLE)
+                .add(BlockInit.ORC_BRICK)
+                .add(BlockInit.SKAVEN_STONE)
+                .add(BlockInit.SKAVEN_COBBLE)
+                .add(BlockInit.SKAVEN_BRICK)
                 .add(BlockInit.MITHRIL_ORE)
                 .add(BlockInit.MITHRIL_COBBLE)
                 .add(BlockInit.MITHRIL_STONE)
@@ -27,6 +38,8 @@ public class TestModBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(BlockInit.MORDOR_COBBLE)
                 .add(BlockInit.DWARF_STONE)
                 .add(BlockInit.DWARF_BRICK)
+                .add(BlockInit.DROW_COBBLE)
+                .add(BlockInit.DWARFIRON_STONE)
                 .add(BlockInit.MITHRIL_LOG)
                 .add(BlockInit.MITHRIL_LEAVES)
                 .add(BlockInit.SILVER_LOG)
@@ -51,6 +64,8 @@ public class TestModBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(BlockInit.EVILWOOD_LOG)
                 .add(BlockInit.SUNELF_LOG)
                 .add(BlockInit.MITHRIL_LOG);
+        getOrCreateTagBuilder(BlockTags.PLANKS)
+                .add(BlockInit.SKAVEN_PLANKS);
 
 
 

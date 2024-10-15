@@ -15,6 +15,7 @@ public class BiomeModificationInit {
                 BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES,
                 PlacedFeatureInit.OVERWORLD_MITHRIL_ORE_KEY
+
         );
         BiomeModifications.addFeature(
                 BiomeSelectors.includeByKey(BiomeKeys.FOREST),

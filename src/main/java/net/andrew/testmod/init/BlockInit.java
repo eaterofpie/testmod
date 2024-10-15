@@ -14,6 +14,8 @@ import java.util.Optional;
 
 public class BlockInit {
     public static final Block DWARF_BRICK = registerWithItem("dwarf_brick", new Block(AbstractBlock.Settings.create().strength(9F)));
+    public static final Block DWARF_COBBLE = registerWithItem("dwarf_cobble", new Block(AbstractBlock.Settings.create().strength(4F)));
+    public static final Block DWARFIRON_STONE = registerWithItem("dwarfiron_stone",new Block(AbstractBlock.Settings.create().strength(5f)));
     public static final Block MITHRIL_BRICK = registerWithItem("mithril_brick", new Block(AbstractBlock.Settings.create().strength(1.6F)));
     public static final Block MITHRIL_COBBLE =registerWithItem("mithril_cobble", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 8)));
     public static final Block MITHRIL_ORE =registerWithItem("mithril_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 8)));
@@ -31,7 +33,20 @@ public class BlockInit {
     public static final Block IRONWOOD_LOG = registerWithItem("ironwood_log", new PillarBlock (AbstractBlock.Settings.create().strength(1.5F).requiresTool()));
     public static final Block EVILWOOD_LOG = registerWithItem("evilwood_log", new PillarBlock(AbstractBlock.Settings.create().strength(5F).requiresTool()));
     public static final Block SUNELF_LOG = registerWithItem("sunelf_log", new PillarBlock(AbstractBlock.Settings.create().requiresTool().strength(1.5F)));
-     public static final LeavesBlock MITHRIL_LEAVES = registerWithItem("mithril_leaves",
+    public static final Block DROW_STONE =registerWithItem("drow_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DROW_COBBLE =registerWithItem("drow_cobble", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DROW_BRICK =registerWithItem("drow_brick", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block ORC_STONE =registerWithItem("orc_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block ORC_COBBLE =registerWithItem("orc_cobble", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block ORC_BRICK =registerWithItem("orc_brick", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block SKAVEN_STONE =registerWithItem("skaven_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block SKAVEN_COBBLE =registerWithItem("skaven_cobble", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block SKAVEN_BRICK =registerWithItem("skaven_brick", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block SKAVEN_PLANKS = registerWithItem("skaven_planks", new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+    public static final Block ELF_STONE =registerWithItem("elf_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block HOBBIT_ORE =registerWithItem("hobbit_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+
+    public static final LeavesBlock MITHRIL_LEAVES = registerWithItem("mithril_leaves",
             new LeavesBlock(AbstractBlock.Settings.create()
                     .mapColor(MapColor.PINK)
                     .strength(0.2F)

@@ -6,6 +6,24 @@
     "targets": [
       {
         "state": {
+          "Name": "testmod:hobbit_ore"
+        },
+        "target": {
+          "predicate_type": "minecraft:tag_match",
+          "tag": "minecraft:stone_ore_replaceables"
+        }
+      },
+      {
+        "state": {
+          "Name": "testmod:orc_stone"
+        },
+        "target": {
+          "predicate_type": "minecraft:tag_match",
+          "tag": "minecraft:stone_ore_replaceables"
+        }
+      },
+      {
+        "state": {
           "Name": "testmod:mithril_ore"
         },
         "target": {
@@ -16,6 +34,15 @@
       {
         "state": {
           "Name": "testmod:dwarf_stone"
+        },
+        "target": {
+          "predicate_type": "minecraft:tag_match",
+          "tag": "minecraft:stone_ore_replaceables"
+        }
+      },
+      {
+        "state": {
+          "Name": "testmod:drow_stone"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

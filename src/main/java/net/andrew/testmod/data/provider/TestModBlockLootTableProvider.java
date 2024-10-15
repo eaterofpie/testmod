@@ -32,8 +32,22 @@ public class TestModBlockLootTableProvider extends FabricBlockLootTableProvider 
         addDrop(BlockInit.EVILWOOD_LOG);
         addDrop(BlockInit.SUNELF_LOG);
         addDrop(BlockInit.DWARF_BRICK);
+        addDrop(BlockInit.DWARF_COBBLE);
+        addDrop(BlockInit.DWARFIRON_STONE);
         addDrop(BlockInit.MITHRIL_BRICK);
         addDrop(BlockInit.DEEPSLATE_MITHRIL_ORE);
+        addDrop(BlockInit.DROW_COBBLE);
+        addDrop(BlockInit.DROW_STONE);
+        addDrop(BlockInit.DROW_BRICK);
+        addDrop(BlockInit.ORC_STONE);
+        addDrop(BlockInit.ORC_COBBLE);
+        addDrop(BlockInit.ORC_BRICK);
+        addDrop(BlockInit.SKAVEN_STONE);
+        addDrop(BlockInit.SKAVEN_COBBLE);
+        addDrop(BlockInit.SKAVEN_BRICK);
+        addDrop(BlockInit.SKAVEN_PLANKS);
+        addDrop(BlockInit.ELF_STONE);
+        addDrop(BlockInit.HOBBIT_ORE);
 
     }
 }

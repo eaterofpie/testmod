@@ -21,7 +21,10 @@ import java.util.List;
 public class ConfiguredFeatureInit {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> OVERWORLD_MITHRIL_ORE_KEY = registerKey("overworld_mithril_ore");
+    public static final RegistryKey<ConfiguredFeature<?,  ?>> HOBBIT_ORE_KEY = registerKey("hobbit_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORC_STONE_KEY = registerKey("orc_stone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DWARF_STONE_KEY = registerKey("dwarf_stone_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DROW_STONE_KEY = registerKey("drow_stone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> NETHER_ANGBAND_ORE_KEY = registerKey("nether_angband_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> END_MORDOR_ORE_KEY = registerKey("end_mordor_ore");
 
@@ -40,8 +43,11 @@ public class ConfiguredFeatureInit {
         RuleTest endOreReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
         List<OreFeatureConfig.Target> overworldMithrilTargets = List.of(
+                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.HOBBIT_ORE.getDefaultState()),
+                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.ORC_STONE.getDefaultState()),
                 OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.MITHRIL_ORE.getDefaultState()),
                 OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.DWARF_STONE.getDefaultState()),
+                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.DROW_STONE.getDefaultState()),
                 OreFeatureConfig.createTarget(deepslateOreReplaceables, BlockInit.DEEPSLATE_MITHRIL_ORE.getDefaultState()));
 
         List<OreFeatureConfig.Target> netherAngbandTargets = List.of(
@@ -51,7 +57,10 @@ public class ConfiguredFeatureInit {
                 OreFeatureConfig.createTarget(endOreReplaceables, BlockInit.MORDOR_ORE.getDefaultState()));
 
         register(context, OVERWORLD_MITHRIL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 9));
+        register(context, HOBBIT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 7));
+        register(context, ORC_STONE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 10));
         register(context, DWARF_STONE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets,8));
+        register(context, DROW_STONE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 5));
         register(context, NETHER_ANGBAND_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherAngbandTargets, 9));
         register(context, END_MORDOR_ORE_KEY, Feature.ORE, new OreFeatureConfig(endExampleTargets, 9));
 

@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.family.BlockFamily;
 
 public class TestModModModelProvider extends FabricModelProvider {
     public TestModModModelProvider(FabricDataOutput output) {
@@ -16,18 +17,31 @@ public class TestModModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MITHRIL_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.HOBBIT_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MITHRIL_COBBLE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MITHRIL_STONE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MITHRIL_BRICK);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ANGBAND_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ANGBND_COBBLE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ANGBAND_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DROW_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DROW_COBBLE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DROW_BRICK);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ORC_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ORC_COBBLE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ORC_BRICK);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.SKAVEN_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.SKAVEN_COBBLE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.SKAVEN_BRICK);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARF_STONE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARF_BRICK);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARF_COBBLE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARFIRON_STONE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MORDOR_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MORDOR_COBBLE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MORDOR_STONE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DEEPSLATE_MITHRIL_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ELF_STONE);
 
 
         blockStateModelGenerator.registerLog(BlockInit.MITHRIL_LOG)
@@ -53,10 +67,15 @@ public class TestModModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(BlockInit.IRONWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(BlockInit.EVIL_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(BlockInit.SUNELF_SAPLING,BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        var fantasy = new BlockFamily.Builder(BlockInit.SKAVEN_PLANKS)
+                .unlockCriterionName("has_planks")
+                .build();
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ItemInit.MITHRIL_ITEM, Models.GENERATED);
+        itemModelGenerator.register(ItemInit.DWARFIRON_ITEM,Models.GENERATED);
     }
 }
