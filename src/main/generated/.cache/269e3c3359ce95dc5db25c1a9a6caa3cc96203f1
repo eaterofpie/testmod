@@ -1,6 +1,6 @@
-// 1.21.1	2024-10-15T15:05:18.334866	Test Mod/Tags for minecraft:block
+// 1.21.1	2024-10-16T11:27:31.2650198	Test Mod/Tags for minecraft:block
 ea791a164ed0d7b7c507faf39f95c1b96d15ac93 data\minecraft\tags\block\planks.json
 179a406ae3d5b9400319287ad9aa649e41a3d0fb data\minecraft\tags\block\leaves.json
 50f26b4173e48462a07e773e956f368a5a5208ef data\minecraft\tags\block\logs.json
-9bbe060c3d7c4ea251c1f2be3c9878b389129160 data\minecraft\tags\block\needs_iron_tool.json
+aec8c6b07e840d46f9cb83d477497a50c4469fe6 data\minecraft\tags\block\needs_iron_tool.json
 7824140a90d13361cf21cef0dd03a0ba3db93ba0 data\minecraft\tags\block\saplings.json

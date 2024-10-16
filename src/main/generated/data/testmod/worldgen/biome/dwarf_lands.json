@@ -6,7 +6,7 @@
       "minecraft:canyon"
     ]
   },
-  "downfall": 0.4,
+  "downfall": 0.8,
   "effects": {
     "fog_color": 3786332,
     "foliage_color": 3786332,
@@ -80,13 +80,16 @@
       "minecraft:spring_lava"
     ],
     [
-      "minecraft:glow_lichen"
+      "minecraft:glow_lichen",
+      "minecraft:patch_grass_forest",
+      "minecraft:flower_warm",
+      "minecraft:patch_grass_badlands"
     ],
     [
       "minecraft:freeze_top_layer"
     ]
   ],
-  "has_precipitation": true,
+  "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {
     "ambient": [
@@ -192,5 +195,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.7
+  "temperature": 0.1
 }

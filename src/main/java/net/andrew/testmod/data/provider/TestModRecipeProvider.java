@@ -61,8 +61,21 @@ public class TestModRecipeProvider extends FabricRecipeProvider {
                 .input('D', BlockInit.DWARF_STONE)
                 .pattern("DD")
                 .pattern("DD")
-                .criterion(hasItem(BlockInit.DWARF_STONE), conditionsFromItem(BlockInit.DWARF_STONE))
+                .criterion(hasItem(BlockInit.DWARF_STONE), conditionsFromItem(BlockInit.DWARFRUBY_STONE))
                 .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlockInit.DWARFRUBY_STONE)
+                .input('D', BlockInit.DWARFRUBY_COBBLE)
+                .pattern("DD")
+                .pattern("DD")
+                .criterion(hasItem(BlockInit.DWARFRUBY_COBBLE), conditionsFromItem(BlockInit.DWARFRUBY_COBBLE))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, BlockInit.DWARFRUBY_COBBLE)
+                .input('D', ItemInit.DWARFRUDY_ITEM)
+                .pattern("DD")
+                .pattern("DD")
+                .criterion(hasItem(ItemInit.DWARFRUDY_ITEM), conditionsFromItem(ItemInit.DWARFRUDY_ITEM))
+                .offerTo(exporter);
+        
     }
     private static @NotNull String hasTag(@NotNull TagKey<Item> tag) {
         return "has_" + tag.id().toString();

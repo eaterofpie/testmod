@@ -49,7 +49,11 @@ public class TestModEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockInit.DWARF_STONE,"dwarf_stone");
         translationBuilder.add(BlockInit.DWARFIRON_STONE, "dwarfiron_stone");
         translationBuilder.add(BlockInit.DWARF_COBBLE, "dwarf_cobble");
+        translationBuilder.add(BlockInit.DWARFRUBY_COBBLE,"dwarfruby_cobble");
+        translationBuilder.add(BlockInit.DWARFRUBY_STONE, "dwarfruby_stone");
+        translationBuilder.add(BlockInit.DWARFRUBY_ORE, "dwarfruby_ore");
         translationBuilder.add(BlockInit.DWARF_BRICK, "dwarf_brick");
+        translationBuilder.add(BlockInit.DWARFSILVER_ORE, "dwarfsilver_ore");
         translationBuilder.add(BlockInit.MORDOR_ORE,"mordor_ore");
         translationBuilder.add(BlockInit.MORDOR_COBBLE,"mordor_cobble");
         translationBuilder.add(BlockInit.MORDOR_STONE, "mordor_stone");

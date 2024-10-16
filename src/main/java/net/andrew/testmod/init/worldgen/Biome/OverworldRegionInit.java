@@ -36,6 +36,9 @@ public class OverworldRegionInit extends Region {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.CRYSTAL_WOODS);
         });
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JAGGED_PEAKS, BiomesInit.CRYSTAL_MOUNTAINS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.DWARF_FARMES);
         });
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
@@ -80,6 +83,9 @@ public class OverworldRegionInit extends Region {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JAGGED_PEAKS, BiomesInit.MORDOR_LANDS);
         });
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.PLAINS, BiomesInit.MORDOR_WASTE);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.JAGGED_PEAKS, BiomesInit.DWARF_MINES);
 
         });
@@ -100,7 +106,13 @@ public class OverworldRegionInit extends Region {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.ELFHAL_WOODS);
         });
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.ELF_ESANA);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.ELFJIETH_WOODS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.SILVER_ELF);
         });
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.DEEP_DARK, BiomesInit.DROW_WOODS);
@@ -143,6 +155,45 @@ public class OverworldRegionInit extends Region {
         });
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.PLAINS, BiomesInit.ORC_UGOL);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.SILVER_ELF);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.SILVER_WOODS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.DESERT, BiomesInit.DEAD_KINGDOM);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.DESERT, BiomesInit.DEAD_LANDS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.CALESHALL);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.SENNELINE);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.COTTLEOIS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.REGAL);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.BADLANDS, BiomesInit.CHAOS_DWARFS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.BADLANDS, BiomesInit.CHAOS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.DARK_FOREST, BiomesInit.DARKELF_WOODS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.ASFELL_WOODS);
+        });
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, BiomesInit.MOLDY_WOODS);
         });
 
 

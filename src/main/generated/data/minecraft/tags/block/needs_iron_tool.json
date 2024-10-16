@@ -31,6 +31,10 @@
     "testmod:ironwood_log",
     "testmod:irnwood_leaves",
     "testmod:deepslate_mithril_ore",
+    "testmod:dwarfruby_cobble",
+    "testmod:dwarfruby_stone",
+    "testmod:dwarfruby_ore",
+    "testmod:dwarfsiver_ore",
     "testmod:mordor_stone"
   ]
 }

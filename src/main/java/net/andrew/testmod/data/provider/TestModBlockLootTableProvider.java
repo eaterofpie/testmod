@@ -48,6 +48,10 @@ public class TestModBlockLootTableProvider extends FabricBlockLootTableProvider 
         addDrop(BlockInit.SKAVEN_PLANKS);
         addDrop(BlockInit.ELF_STONE);
         addDrop(BlockInit.HOBBIT_ORE);
+        addDrop(BlockInit.DWARFRUBY_COBBLE);
+        addDrop(BlockInit.DWARFRUBY_STONE);
+        addDrop(BlockInit.DWARFRUBY_ORE);
+        addDrop(BlockInit.DWARFSILVER_ORE);
 
     }
 }

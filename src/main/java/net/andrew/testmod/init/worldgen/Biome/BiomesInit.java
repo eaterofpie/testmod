@@ -22,6 +22,7 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
 
+
 import java.util.function.Consumer;
 
 
@@ -30,6 +31,8 @@ public static final RegistryKey<Biome> CRYSTAL_BIOME = RegistryKey.of(RegistryKe
         Identifier.of(TestMod.MOD_ID, "crystal_biome"));
     public static final RegistryKey<Biome> CRYSTAL_WOODS = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(TestMod.MOD_ID, "crystal_woods"));
+    public static final RegistryKey<Biome> CRYSTAL_MOUNTAINS = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "crystal_mountains"));
     public static final RegistryKey<Biome> ORC_FOREST = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(TestMod.MOD_ID, "orc_forest"));
     public static final RegistryKey<Biome> MORDOR_LANDS = RegistryKey.of(RegistryKeys.BIOME,
@@ -78,6 +81,8 @@ public static final RegistryKey<Biome> CRYSTAL_BIOME = RegistryKey.of(RegistryKe
             Identifier.of(TestMod.MOD_ID, "elfjieth_woods"));
     public static final RegistryKey<Biome> ELFMHLONE_WOODS = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(TestMod.MOD_ID, "elfmhlone_woods"));
+    public static final RegistryKey<Biome> ELF_ESANA = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "elf_esana"));
     public static final RegistryKey<Biome> DROW_WOODS = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(TestMod.MOD_ID, "drow_woods"));
     public static final RegistryKey<Biome> DROW_KINGDOM = RegistryKey.of(RegistryKeys.BIOME,
@@ -112,13 +117,48 @@ public static final RegistryKey<Biome> CRYSTAL_BIOME = RegistryKey.of(RegistryKe
             Identifier.of(TestMod.MOD_ID, "orc_ugol"));
     public static final RegistryKey<Biome> ORC_DRADAD = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(TestMod.MOD_ID, "orc_dradad"));
-
+    public static final RegistryKey<Biome> SILVER_ELF = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "silver_elf"));
+    public static final RegistryKey<Biome> SILVER_WOODS = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "silver_woods"));
+    public static final RegistryKey<Biome> DEAD_KINGDOM = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "dead_kingdom"));
+    public static final RegistryKey<Biome> DEAD_LANDS = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "dead_lands"));
+    public static final RegistryKey<Biome> DEAD_PITS = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "dead_pits"));
+    public static final RegistryKey<Biome> TROLL_LANDS = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "troll_lands"));
+    public static final RegistryKey<Biome> TROLL_WOODS = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "troll_woods"));
+    public static final RegistryKey<Biome> CALESHALL= RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "caleshall"));
+    public static final RegistryKey<Biome> COTTLEOIS= RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "colleois"));
+    public static final RegistryKey<Biome> SENNELINE= RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "senneline"));
+    public static final RegistryKey<Biome> REGAL= RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "regal"));
+    public static final RegistryKey<Biome> MORDOR_WASTE= RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "mordor_waste"));
+    public static final RegistryKey<Biome> CHAOS_DWARFS= RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "chaos_dwarfs"));
+    public static final RegistryKey<Biome> CHAOS= RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "chaos"));
+    public static final RegistryKey<Biome> DARKELF_WOODS= RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "darkelf_woods"));
+    public static final RegistryKey<Biome> ASFELL_WOODS= RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "asfell_woods"));
+    public static final RegistryKey<Biome> MOLDY_WOODS= RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(TestMod.MOD_ID, "moldy_woods"));
 
     public static void boostrap(Registerable<Biome> context) {
     context.register(CRYSTAL_BIOME, crystal_biome(context));
     context.register(CRYSTAL_WOODS, crystal_woods(context));
+    context.register(CRYSTAL_MOUNTAINS, crystal_mountains(context));
     context.register(ORC_FOREST, orc_forest (context));
-    context.register(MORDOR_LANDS, mordor_lands(context)) ;
+    context.register(MORDOR_LANDS, mordor_lands(context));
+    context.register(MORDOR_WASTE, mordor_waste(context));
     context.register(DWARF_MINES, dwarf_mines(context));
     context.register(DWARF_LANDS, dwarf_lands(context));
     context.register(DWARF_KINGDOM, dwarf_kingdom(context));
@@ -140,6 +180,7 @@ public static final RegistryKey<Biome> CRYSTAL_BIOME = RegistryKey.of(RegistryKe
     context.register(ELFRYSA_WOODS, elfrysa_woods(context));
     context.register(ELFHAL_WOODS, elfhal_woods(context));
     context.register(ELFJIETH_WOODS, elfjieth_woods(context));
+    context.register(ELF_ESANA, elf_esana(context));
     context.register(ELFMHLONE_WOODS, elfmhlone_woods(context));
     context.register(DROW_WOODS, drow_woods(context));
     context.register(DROW_KINGDOM, drow_kingdom(context));
@@ -158,6 +199,26 @@ public static final RegistryKey<Biome> CRYSTAL_BIOME = RegistryKey.of(RegistryKe
     context.register(ORC_ZABE, orc_zabe(context));
     context.register(ORC_UGOL, orc_ugol(context));
     context.register(ORC_DRADAD, orc_dardad(context));
+    context.register(SILVER_ELF, silver_elf(context));
+    context.register(SILVER_WOODS, silver_woods(context));
+    context.register(DEAD_KINGDOM, dead_kingdom(context));
+    context.register(DEAD_LANDS, dead_lands(context));
+    context.register(DEAD_PITS, dead_pits(context));
+    context.register(TROLL_LANDS,troll_lands(context));
+    context.register(TROLL_WOODS, troll_woods(context));
+    context.register(CALESHALL, caleshall(context));
+    context.register(COTTLEOIS, colleois(context));
+    context.register(SENNELINE, senneline(context));
+    context.register(REGAL, regal(context));
+    context.register(MOLDY_WOODS, moldy_woods(context));
+    context.register(CHAOS_DWARFS,chaos_dwarfs(context));
+    context.register(CHAOS, chaos(context));
+    context.register(DARKELF_WOODS, darkelf_woods(context));
+    context.register(ASFELL_WOODS, asfell_woods(context));
+
+
+
+
 
 
 }
@@ -185,6 +246,7 @@ public static Biome crystal_biome(Registerable<Biome> context) {
                     context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
     globalOverworldGeneration(biomeBuilder);
+    DefaultBiomeFeatures.addMineables(biomeBuilder);
     DefaultBiomeFeatures.addForestTrees(biomeBuilder);
     DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
     DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
@@ -209,6 +271,639 @@ public static Biome crystal_biome(Registerable<Biome> context) {
                     .moodSound(BiomeMoodSound.CAVE)
                     .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
             .build();
+}
+
+
+    public static Biome moldy_woods(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addMineables(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+}
+
+
+    public static Biome asfell_woods(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addMineables(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+}
+
+
+    public static Biome darkelf_woods(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addMineables(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+
+}
+
+
+    public static Biome troll_woods(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addMineables(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+
+}
+
+
+    public static Biome troll_lands(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+
+    }
+
+
+    public static Biome colleois(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+
+
+    public static Biome senneline(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+
+
+    public static Biome caleshall(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+
+
+    public static Biome chaos(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+
+
+    public static Biome regal(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+}
+
+
+    public static Biome crystal_mountains(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+
+
+    public static Biome dead_pits(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addBirchTrees(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+
+
+    public static Biome dead_kingdom(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addBirchTrees(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+
+
+    public static Biome dead_lands(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+
+
+    public static Biome silver_elf(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+
+
+    public static Biome silver_woods(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
 }
 
 
@@ -488,10 +1183,11 @@ public static Biome crystal_biome(Registerable<Biome> context) {
                         .moodSound(BiomeMoodSound.CAVE)
                         .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
                 .build();
+
     }
 
 
-    public static Biome evil_woods(Registerable<Biome> context) {
+    public static Biome chaos_dwarfs(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
         spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
 
@@ -503,8 +1199,6 @@ public static Biome crystal_biome(Registerable<Biome> context) {
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
-        DefaultBiomeFeatures.addBirchTrees(biomeBuilder);
-        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
         DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
         DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
@@ -528,7 +1222,9 @@ public static Biome crystal_biome(Registerable<Biome> context) {
                         .moodSound(BiomeMoodSound.CAVE)
                         .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
                 .build();
-}
+
+
+    }
 
 
     public static Biome dwarf_khel(Registerable<Biome> context) {
@@ -706,6 +1402,7 @@ public static Biome crystal_biome(Registerable<Biome> context) {
 
 
         return new Biome.Builder()
+                .temperatureModifier(Biome.TemperatureModifier.NONE)
                 .precipitation(true)
                 .downfall(0.4f)
                 .temperature(0.7f)
@@ -879,6 +1576,45 @@ public static Biome crystal_biome(Registerable<Biome> context) {
     }
 
 
+    public static Biome elf_esana(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestTrees(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(10273967)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+
+
     public static Biome dwarf_todir(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
         spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
@@ -937,6 +1673,7 @@ public static Biome crystal_biome(Registerable<Biome> context) {
 
 
         return new Biome.Builder()
+                .temperatureModifier(Biome.TemperatureModifier.NONE)
                 .precipitation(true)
                 .downfall(0.4f)
                 .temperature(0.7f)
@@ -977,7 +1714,7 @@ public static Biome crystal_biome(Registerable<Biome> context) {
 
         return new Biome.Builder()
                 .precipitation(true)
-                .downfall(0.4f)
+                .downfall(0.6f)
                 .temperature(0.7f)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
@@ -1016,7 +1753,7 @@ public static Biome crystal_biome(Registerable<Biome> context) {
 
         return new Biome.Builder()
                 .precipitation(true)
-                .downfall(0.4f)
+                .downfall(0.6f)
                 .temperature(0.7f)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
@@ -1054,8 +1791,8 @@ public static Biome crystal_biome(Registerable<Biome> context) {
 
         return new Biome.Builder()
                 .precipitation(true)
-                .downfall(0.4f)
-                .temperature(0.7f)
+                .downfall(0.6f)
+                .temperature(0.6f)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
                 .effects((new BiomeEffects.Builder())
@@ -1090,8 +1827,8 @@ public static Biome crystal_biome(Registerable<Biome> context) {
 
         return new Biome.Builder()
                 .precipitation(true)
-                .downfall(0.4f)
-                .temperature(0.7f)
+                .downfall(0.6f)
+                .temperature(0.6f)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
                 .effects((new BiomeEffects.Builder())
@@ -1107,6 +1844,41 @@ public static Biome crystal_biome(Registerable<Biome> context) {
 
     }
     public static Biome mordor_lands(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
+
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+
+
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.7f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0xe82e3b)
+                        .waterFogColor(0xbf1b26)
+                        .skyColor(0x30c918)
+                        .grassColor(9539985)
+                        .foliageColor(3786332)
+                        .fogColor(3786332)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .music(MusicType.createIngameMusic(RegistryEntry.of(SoundsInit.BAR_BRAWL))).build())
+                .build();
+    }
+    public static Biome mordor_waste(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
         spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
 
@@ -1293,6 +2065,7 @@ public static Biome dwarf_mines(Registerable<Biome> context) {
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addMineables(biomeBuilder);
         DefaultBiomeFeatures.addBirchTrees(biomeBuilder);
         DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
@@ -1301,8 +2074,8 @@ public static Biome dwarf_mines(Registerable<Biome> context) {
 
         return new Biome.Builder()
                 .precipitation(true)
-                .downfall(0.4f)
-                .temperature(0.7f)
+                .downfall(0f)
+                .temperature(0f)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
                 .effects((new BiomeEffects.Builder())
@@ -1321,6 +2094,7 @@ public static Biome dwarf_lands(Registerable<Biome> context) {
     SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
     spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
 
+
     DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
     DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
 
@@ -1329,15 +2103,20 @@ public static Biome dwarf_lands(Registerable<Biome> context) {
                     context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
     globalOverworldGeneration(biomeBuilder);
+    DefaultBiomeFeatures.addForestGrass(biomeBuilder);
+    DefaultBiomeFeatures.addExtraDefaultFlowers(biomeBuilder);
+    DefaultBiomeFeatures.addDefaultGrass(biomeBuilder);
     DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
     DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
     DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
 
 
     return new Biome.Builder()
-            .precipitation(true)
-            .downfall(0.4f)
-            .temperature(0.7f)
+
+
+            .precipitation(false)
+            .downfall(0.8f)
+            .temperature(0.10f)
             .generationSettings(biomeBuilder.build())
             .spawnSettings(spawnBuilder.build())
             .effects((new BiomeEffects.Builder())
@@ -1364,12 +2143,14 @@ public static Biome dwarf_kingdom(Registerable<Biome> context) {
                     context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
     globalOverworldGeneration(biomeBuilder);
+    DefaultBiomeFeatures.addDefaultGrass(biomeBuilder);
     DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
     DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
     DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
 
 
     return new Biome.Builder()
+            .temperatureModifier(Biome.TemperatureModifier.NONE)
             .precipitation(true)
             .downfall(0.4f)
             .temperature(0.7f)
@@ -1398,6 +2179,7 @@ public static Biome dwarf_kingdom(Registerable<Biome> context) {
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestGrass(biomeBuilder);
         DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
         DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
@@ -1432,6 +2214,7 @@ public static Biome dwarf_kingdom(Registerable<Biome> context) {
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addForestGrass(biomeBuilder);
         DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
         DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);

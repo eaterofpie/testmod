@@ -8,7 +8,7 @@ import net.minecraft.registry.Registry;
 
 
 public class ItemInit {
-
+    public static final Item DWARFRUDY_ITEM = register("dwarfrudy_item", new Item(new Item.Settings()));
     public static final Item DWARFIRON_ITEM = register("dwarfiron_item", new Item(new Item.Settings()));
     public static final Item MITHRIL_ITEM = register("mithril_item", new Item(new Item.Settings()));
     public static <T extends Item> T register(String name, T item) {

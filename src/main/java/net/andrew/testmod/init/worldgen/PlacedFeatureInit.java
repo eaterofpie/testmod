@@ -18,6 +18,8 @@ import java.util.List;
 
 public class PlacedFeatureInit {
     public static final RegistryKey<PlacedFeature> OVERWORLD_MITHRIL_ORE_KEY = registerKey("overworld_mithril_ore");
+    public static final RegistryKey<PlacedFeature> DWARFSIVER_ORE = registerKey("dwarfsilver_ore");
+    public static final RegistryKey<PlacedFeature> DWARFRUBY_STONE = registerKey("dwarfruby_stone");
     public static final RegistryKey<PlacedFeature> HOBBIT_ORE_KEY = registerKey("hobbit_ore");
     public static final RegistryKey<PlacedFeature> ORC_STONE_KEY = registerKey("orc_stone");
     public static final RegistryKey<PlacedFeature> DWARF_STONE_KEY = registerKey("dwarf_stone");
@@ -38,13 +40,22 @@ public class PlacedFeatureInit {
         register(context, OVERWORLD_MITHRIL_ORE_KEY, registryLookup.getOrThrow(ConfiguredFeatureInit.OVERWORLD_MITHRIL_ORE_KEY),
                 Modifiers.modifiersCount(9,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-24), YOffset.fixed(64))));
+
+        register(context, DWARFSIVER_ORE, registryLookup.getOrThrow(ConfiguredFeatureInit.DWARFSILVER_ORE),
+                Modifiers.modifiersCount(9,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-24), YOffset.fixed(23))));
+
+        register(context, DWARFRUBY_STONE, registryLookup.getOrThrow(ConfiguredFeatureInit.DWARFRUBY_STONE),
+                Modifiers.modifiersCount(9,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-24), YOffset.fixed(34))));
+
         register(context, HOBBIT_ORE_KEY, registryLookup.getOrThrow(ConfiguredFeatureInit.HOBBIT_ORE_KEY),
                 Modifiers.modifiersCount(9,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-24), YOffset.fixed(2))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-24), YOffset.fixed(35))));
 
         register(context, ORC_STONE_KEY, registryLookup.getOrThrow(ConfiguredFeatureInit.ORC_STONE_KEY),
                 Modifiers.modifiersCount(9,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-24), YOffset.fixed(2))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-24), YOffset.fixed(13))));
 
 
         register(context, DWARF_STONE_KEY, registryLookup.getOrThrow(ConfiguredFeatureInit.DWARF_STONE_KEY),

@@ -47,6 +47,10 @@ public class TestModBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(BlockInit.IRONWOOD_LOG)
                 .add(BlockInit.IRONWOOD_LEAVES)
                 .add(BlockInit.DEEPSLATE_MITHRIL_ORE)
+                .add(BlockInit.DWARFRUBY_COBBLE)
+                .add(BlockInit.DWARFRUBY_STONE)
+                .add(BlockInit.DWARFRUBY_ORE)
+                .add(BlockInit.DWARFSILVER_ORE)
                 .add(BlockInit.MORDOR_STONE);
 
         getOrCreateTagBuilder(BlockTags.SAPLINGS)

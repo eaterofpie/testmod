@@ -45,6 +45,10 @@ public class BlockInit {
     public static final Block SKAVEN_PLANKS = registerWithItem("skaven_planks", new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
     public static final Block ELF_STONE =registerWithItem("elf_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
     public static final Block HOBBIT_ORE =registerWithItem("hobbit_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARFRUBY_COBBLE =registerWithItem("dwarfruby_cobble", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARFRUBY_STONE =registerWithItem("dwarfruby_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARFRUBY_ORE =registerWithItem("dwarfruby_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARFSILVER_ORE =registerWithItem("dwarfsiver_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
 
     public static final LeavesBlock MITHRIL_LEAVES = registerWithItem("mithril_leaves",
             new LeavesBlock(AbstractBlock.Settings.create()

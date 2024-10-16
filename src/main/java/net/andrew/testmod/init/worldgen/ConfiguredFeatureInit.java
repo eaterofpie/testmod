@@ -21,6 +21,8 @@ import java.util.List;
 public class ConfiguredFeatureInit {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> OVERWORLD_MITHRIL_ORE_KEY = registerKey("overworld_mithril_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DWARFSILVER_ORE = registerKey("dwarfsilver_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DWARFRUBY_STONE = registerKey("dwarfruby_stone");
     public static final RegistryKey<ConfiguredFeature<?,  ?>> HOBBIT_ORE_KEY = registerKey("hobbit_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ORC_STONE_KEY = registerKey("orc_stone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DWARF_STONE_KEY = registerKey("dwarf_stone_key");
@@ -43,6 +45,8 @@ public class ConfiguredFeatureInit {
         RuleTest endOreReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
         List<OreFeatureConfig.Target> overworldMithrilTargets = List.of(
+                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.DWARFRUBY_STONE.getDefaultState()),
+                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.DWARFSILVER_ORE.getDefaultState()),
                 OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.HOBBIT_ORE.getDefaultState()),
                 OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.ORC_STONE.getDefaultState()),
                 OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.MITHRIL_ORE.getDefaultState()),
@@ -57,6 +61,8 @@ public class ConfiguredFeatureInit {
                 OreFeatureConfig.createTarget(endOreReplaceables, BlockInit.MORDOR_ORE.getDefaultState()));
 
         register(context, OVERWORLD_MITHRIL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 9));
+        register(context, DWARFSILVER_ORE, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 12));
+        register(context, DWARFRUBY_STONE, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 10));
         register(context, HOBBIT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 7));
         register(context, ORC_STONE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 10));
         register(context, DWARF_STONE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets,8));

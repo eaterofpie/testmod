@@ -42,6 +42,10 @@ public class TestModModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.MORDOR_STONE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DEEPSLATE_MITHRIL_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(BlockInit.ELF_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARFRUBY_COBBLE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARFRUBY_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARFRUBY_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(BlockInit.DWARFSILVER_ORE);
 
 
         blockStateModelGenerator.registerLog(BlockInit.MITHRIL_LOG)
@@ -77,5 +81,6 @@ public class TestModModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ItemInit.MITHRIL_ITEM, Models.GENERATED);
         itemModelGenerator.register(ItemInit.DWARFIRON_ITEM,Models.GENERATED);
+        itemModelGenerator.register(ItemInit.DWARFRUDY_ITEM,Models.GENERATED);
     }
 }
