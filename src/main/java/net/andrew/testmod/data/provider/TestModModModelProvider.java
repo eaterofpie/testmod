@@ -58,6 +58,8 @@ public class TestModModModelProvider extends FabricModelProvider {
                 .log(BlockInit.SUNELF_LOG);
         blockStateModelGenerator.registerLog(BlockInit.EVILWOOD_LOG)
                 .log(BlockInit.EVILWOOD_LOG);
+        blockStateModelGenerator.registerLog(BlockInit.DARKELF_LOG)
+                .log(BlockInit.DARKELF_LOG);
 
 
 

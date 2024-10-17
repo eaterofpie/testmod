@@ -68,6 +68,7 @@ public class TestModEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockInit.SKAVEN_PLANKS, "skaven_planks");
         translationBuilder.add(BlockInit.ELF_STONE, "elf_stone");
         translationBuilder.add(BlockInit.HOBBIT_ORE,"hobbit_ore");
+        translationBuilder.add(BlockInit.DARKELF_LOG, "darkelf_log");
 
     }
 }

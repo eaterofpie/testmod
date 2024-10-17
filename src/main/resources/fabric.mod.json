@@ -29,6 +29,7 @@
 	},
 	"mixins": [
 		"test-mod.mixins.json",
+
 		{
 			"config": "test-mod.client.mixins.json",
 			"environment": "client"

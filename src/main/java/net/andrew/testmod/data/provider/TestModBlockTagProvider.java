@@ -63,6 +63,7 @@ public class TestModBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(BlockInit.EVIL_LEAVES)
                 .add(BlockInit.MITHRIL_LEAVES);
         getOrCreateTagBuilder(BlockTags.LOGS)
+                .add(BlockInit.DARKELF_LOG)
                 .add(BlockInit.SILVER_LOG)
                 .add(BlockInit.IRONWOOD_LOG)
                 .add(BlockInit.EVILWOOD_LOG)

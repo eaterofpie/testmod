@@ -1,4 +1,4 @@
-// 1.21.1	2024-10-16T11:27:31.2700198	Test Mod/Block Loot Tables
+// 1.21.1	2024-10-16T22:13:41.7946393	Test Mod/Block Loot Tables
 21f21ed5691c0b150eacdd355ab283ef053e59fd data\testmod\loot_table\blocks\drow_stone.json
 2e7f7a02e776c583b33eda73574b7a71a082b953 data\testmod\loot_table\blocks\angband_stone.json
 8d71ac41a31478c2295e1758e3b6b07acb12cf74 data\testmod\loot_table\blocks\mithril_stone.json
@@ -8,6 +8,7 @@ efc50e40bec1c345d5818c5755fae6190fdd3b03 data\testmod\loot_table\blocks\deepslat
 04b3084a037072d00022bfe14ad48906ee1c86ec data\testmod\loot_table\blocks\silver_leaves.json
 ab77b36c0744b387d403299387b216429c73746f data\testmod\loot_table\blocks\angband_ore.json
 abec3f4f3817e41445f62fecd13e352906348648 data\testmod\loot_table\blocks\drow_brick.json
+7f4131cd987e25703c5eeba08bcd2fe340afb60f data\testmod\loot_table\blocks\darkelf_log.json
 28f469f5ce76909c93f660a08a5ca3c6f3fe13b7 data\testmod\loot_table\blocks\ironwood_log.json
 cf86f3e3d744b359fcf4a0372de447f9544399bb data\testmod\loot_table\blocks\dwarfruby_cobble.json
 8b4a34104f51147774bf2183dc59181a576bd4db data\testmod\loot_table\blocks\skaven_stone.json

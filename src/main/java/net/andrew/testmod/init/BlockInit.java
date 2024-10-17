@@ -49,6 +49,7 @@ public class BlockInit {
     public static final Block DWARFRUBY_STONE =registerWithItem("dwarfruby_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
     public static final Block DWARFRUBY_ORE =registerWithItem("dwarfruby_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
     public static final Block DWARFSILVER_ORE =registerWithItem("dwarfsiver_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DARKELF_LOG =registerWithItem("darkelf_log", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
 
     public static final LeavesBlock MITHRIL_LEAVES = registerWithItem("mithril_leaves",
             new LeavesBlock(AbstractBlock.Settings.create()
