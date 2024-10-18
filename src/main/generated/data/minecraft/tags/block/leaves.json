@@ -1,8 +1,9 @@
 {
   "values": [
     "testmod:silver_leaves",
-    "testmod:irnwood_leaves",
+    "testmod:ironwood_leaves",
     "testmod:evil_leaves",
+    "testmod:darkelf_leaves",
     "testmod:mithril_leaves"
   ]
 }

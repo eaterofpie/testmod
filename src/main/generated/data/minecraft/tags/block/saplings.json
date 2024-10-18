@@ -2,6 +2,8 @@
   "values": [
     "testmod:mithril_sapling",
     "testmod:ironwood_sapling",
+    "testmod:darkelf_sapling",
+    "testmod:evil_sapling",
     "testmod:silver_sapling"
   ]
 }

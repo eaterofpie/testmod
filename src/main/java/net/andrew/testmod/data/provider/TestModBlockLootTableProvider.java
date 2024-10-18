@@ -18,7 +18,7 @@ public class TestModBlockLootTableProvider extends FabricBlockLootTableProvider 
         addDrop(BlockInit.ANGBAND_ORE);
         addDrop(BlockInit.ANGBAND_STONE);
         addDrop(BlockInit.DWARF_STONE);
-        addDrop(BlockInit.ANGBND_COBBLE);
+        addDrop(BlockInit.ANGBAND_COBBLE);
         addDrop(BlockInit.MITHRIL_COBBLE);
         addDrop(BlockInit.MITHRIL_ORE);
         addDrop(BlockInit.MITHRIL_STONE);
@@ -51,8 +51,16 @@ public class TestModBlockLootTableProvider extends FabricBlockLootTableProvider 
         addDrop(BlockInit.DWARFRUBY_COBBLE);
         addDrop(BlockInit.DWARFRUBY_STONE);
         addDrop(BlockInit.DWARFRUBY_ORE);
-        addDrop(BlockInit.DWARFSILVER_ORE);
+        addDrop(BlockInit.DWARFSIVER_ORE);
         addDrop(BlockInit.DARKELF_LOG);
+        addDrop(BlockInit.DARKELF_LEAVES);
+        addDrop(BlockInit.ELFLOG);
+        addDrop(BlockInit.DWARFLOG);
+        addDrop(BlockInit.MORDORLOG);
+        addDrop(BlockInit.ELFMOSSY_STONE);
+        addDrop(BlockInit.DWARF_MOSSYSTONE);
+        addDrop(BlockInit.DWARF_LIME);
+
 
     }
 }

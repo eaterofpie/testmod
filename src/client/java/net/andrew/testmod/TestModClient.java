@@ -12,5 +12,7 @@ public class TestModClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),BlockInit.MITHRIL_SAPLING);
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),BlockInit.SILVER_SAPLING);
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),BlockInit.IRONWOOD_SAPLING);
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),BlockInit.EVIL_SAPLING);
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),BlockInit.DARKELF_SAPLING);
 	}
 }

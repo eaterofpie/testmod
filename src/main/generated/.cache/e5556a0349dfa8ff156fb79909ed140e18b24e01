@@ -1,4 +1,4 @@
-// 1.21.1	2024-10-16T22:13:41.7946393	Test Mod/Block Loot Tables
+// 1.21.1	2024-10-17T22:46:44.3059726	Test Mod/Block Loot Tables
 21f21ed5691c0b150eacdd355ab283ef053e59fd data\testmod\loot_table\blocks\drow_stone.json
 2e7f7a02e776c583b33eda73574b7a71a082b953 data\testmod\loot_table\blocks\angband_stone.json
 8d71ac41a31478c2295e1758e3b6b07acb12cf74 data\testmod\loot_table\blocks\mithril_stone.json
@@ -14,7 +14,9 @@ cf86f3e3d744b359fcf4a0372de447f9544399bb data\testmod\loot_table\blocks\dwarfrub
 8b4a34104f51147774bf2183dc59181a576bd4db data\testmod\loot_table\blocks\skaven_stone.json
 7c7674fb221875f8dd5622ce1649c18a2d29e93d data\testmod\loot_table\blocks\mithril_cobble.json
 ee7586b25f189b08d34ad0afde3a3461c79ef8e0 data\testmod\loot_table\blocks\orc_cobble.json
+0863e024ffca78fdbc934fe2b17e158ce2aa0311 data\testmod\loot_table\blocks\mordorlog.json
 24a5add62706a49562af36c37d565e8dff948892 data\testmod\loot_table\blocks\hobbit_ore.json
+36f27f591b9831755afa3904aa6e897dec0062d6 data\testmod\loot_table\blocks\elflog.json
 b731e32987dbb3b2ce0f248db655ee6998753732 data\testmod\loot_table\blocks\dwarf_cobble.json
 a27dfade1ad0b593039d63db024df81e5c5f0bb8 data\testmod\loot_table\blocks\mordor_stone.json
 012226dce045825f803e0bf383630c31eeda2b03 data\testmod\loot_table\blocks\sunelf_log.json
@@ -23,12 +25,15 @@ a27dfade1ad0b593039d63db024df81e5c5f0bb8 data\testmod\loot_table\blocks\mordor_s
 0f20268e6662f5c859812dd273a49aad3b05b8af data\testmod\loot_table\blocks\angband_cobble.json
 19dde4fc864895dc759cdd1c6a411000ecda51ba data\testmod\loot_table\blocks\mordor_cobble.json
 5316e4a2219adde37f7af2ead88763f62422effa data\testmod\loot_table\blocks\evilwood_log.json
-07443da19099b09eb949a4bc5cbb4963e31a8d5a data\testmod\loot_table\blocks\dwarf_stone.json
 5263efe47ec6a19df64d3ceed1f50be05d2f4a87 data\testmod\loot_table\blocks\skaven_planks.json
+07443da19099b09eb949a4bc5cbb4963e31a8d5a data\testmod\loot_table\blocks\dwarf_stone.json
 3339c633ce1af8d02f231625352dfc6eec09d514 data\testmod\loot_table\blocks\mordor_ore.json
+d828ff623166d7b47205a6433d361731e284edfb data\testmod\loot_table\blocks\elfmossy_stone.json
+10250a5ed53c68a6fbab72d22e0434b0908f528c data\testmod\loot_table\blocks\dwarf_mossystone.json
 19feb7b137c2fb269bff5bf7c854f92926c5cf00 data\testmod\loot_table\blocks\dwarfruby_ore.json
 5559adb9b5d39c63d783eb66be4b4b52807461ee data\testmod\loot_table\blocks\orc_stone.json
 1f1220008c5536f3942d81f2fe8f23b33526e221 data\testmod\loot_table\blocks\dwarfiron_stone.json
+8ac2f7f1bf6555a931960c6c2dd04102ffae4587 data\testmod\loot_table\blocks\dwarflog.json
 a45804c0010a946cf092942001debe34f406ea8b data\testmod\loot_table\blocks\skaven_cobble.json
 869c717a8d9e44f61cef1c00f39423ad0cf1d7bd data\testmod\loot_table\blocks\drow_cobble.json
 40a02d3493cebed3b198ca8413dd4beacd30cbb1 data\testmod\loot_table\blocks\dwarfruby_stone.json
@@ -36,4 +41,5 @@ e76a9627cd486d9073b2bf823621fcfb6792119e data\testmod\loot_table\blocks\elf_ston
 e1011e00bb78869b6b8dbf803dfda601327645bc data\testmod\loot_table\blocks\dwarfsiver_ore.json
 aaa4fd87f7e5168c1d1e782ad76f9fd576f3a220 data\testmod\loot_table\blocks\mithril_ore.json
 0128cdd5fa68af34545a24899bfc3962ce378a64 data\testmod\loot_table\blocks\silver_log.json
+18b110aaf7122bc3842949c82fbbc07001c097bb data\testmod\loot_table\blocks\darkelf_leaves.json
 074224c0ba611907a32bab22b9062a8e1d2efe81 data\testmod\loot_table\blocks\dwarf_brick.json

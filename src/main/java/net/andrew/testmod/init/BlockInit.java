@@ -21,7 +21,7 @@ public class BlockInit {
     public static final Block MITHRIL_ORE =registerWithItem("mithril_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 8)));
     public static final Block MITHRIL_STONE =registerWithItem("mithril_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
     public static final Block ANGBAND_ORE =registerWithItem("angband_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 8)));
-    public static final Block ANGBND_COBBLE =registerWithItem("angband_cobble", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 9)));
+    public static final Block ANGBAND_COBBLE =registerWithItem("angband_cobble", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 9)));
     public static final Block ANGBAND_STONE =registerWithItem("angband_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 8)));
     public static final Block MORDOR_ORE =registerWithItem("mordor_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 8)));
     public static final Block MORDOR_COBBLE =registerWithItem("mordor_cobble", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 8)));
@@ -48,8 +48,16 @@ public class BlockInit {
     public static final Block DWARFRUBY_COBBLE =registerWithItem("dwarfruby_cobble", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
     public static final Block DWARFRUBY_STONE =registerWithItem("dwarfruby_stone", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
     public static final Block DWARFRUBY_ORE =registerWithItem("dwarfruby_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
-    public static final Block DWARFSILVER_ORE =registerWithItem("dwarfsiver_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARFSIVER_ORE =registerWithItem("dwarfsiver_ore", new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
     public static final Block DARKELF_LOG =registerWithItem("darkelf_log", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block ELFLOG=registerWithItem("elflog", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARFLOG=registerWithItem("dwarflog", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block MORDORLOG=registerWithItem("mordorlog", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block ELFMOSSY_STONE=registerWithItem("elfmossy_stone", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARF_MOSSYSTONE = registerWithItem("dwarf_mossystone", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARF_LIME=registerWithItem("dwarf_lime", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+
+
 
     public static final LeavesBlock MITHRIL_LEAVES = registerWithItem("mithril_leaves",
             new LeavesBlock(AbstractBlock.Settings.create()
@@ -77,7 +85,7 @@ public class BlockInit {
                     .burnable()
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .solidBlock(Blocks::never)));
-    public static final LeavesBlock IRONWOOD_LEAVES = registerWithItem("irnwood_leaves",
+    public static final LeavesBlock IRONWOOD_LEAVES = registerWithItem("ironwood_leaves",
             new LeavesBlock(AbstractBlock.Settings.create()
                     .mapColor(MapColor.PINK)
                     .strength(0.2F)
@@ -91,6 +99,19 @@ public class BlockInit {
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .solidBlock(Blocks::never)));
     public static final LeavesBlock EVIL_LEAVES = registerWithItem("evil_leaves",
+            new LeavesBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PINK)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
+    public static final LeavesBlock DARKELF_LEAVES = registerWithItem("darkelf_leaves",
             new LeavesBlock(AbstractBlock.Settings.create()
                     .mapColor(MapColor.PINK)
                     .strength(0.2F)
@@ -124,6 +145,31 @@ public class BlockInit {
                             Optional.empty(),
                             Optional.empty(),
                             Optional.of(ConfiguredFeatureInit.MITHRIL_TREE_KEY),
+                            Optional.empty(),
+                            Optional.empty(),
+                            Optional.empty()
+                    ),
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
+                            .ticksRandomly()
+                            .strength(0.0F)
+                            .sounds(BlockSoundGroup.GRASS)
+                            .nonOpaque()
+                            .allowsSpawning(Blocks::canSpawnOnLeaves)
+                            .suffocates(Blocks::never)
+                            .blockVision(Blocks::never)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .solidBlock(Blocks::never)
+                            .noCollision()));
+    public static final SaplingBlock DARKELF_SAPLING = registerWithItem("darkelf_sapling",
+            new SaplingBlock(
+                    new SaplingGenerator(
+                            TestMod.id("darkelf_sapling").toString(),
+                            2.1F,
+                            Optional.empty(),
+                            Optional.empty(),
+                            Optional.of(ConfiguredFeatureInit.DARKELF_TREE_KEY),
                             Optional.empty(),
                             Optional.empty(),
                             Optional.empty()

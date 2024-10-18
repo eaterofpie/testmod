@@ -18,7 +18,7 @@ import java.util.List;
 
 public class PlacedFeatureInit {
     public static final RegistryKey<PlacedFeature> OVERWORLD_MITHRIL_ORE_KEY = registerKey("overworld_mithril_ore");
-    public static final RegistryKey<PlacedFeature> DWARFSIVER_ORE = registerKey("dwarfsilver_ore");
+    public static final RegistryKey<PlacedFeature> DWARFSIVER_ORE = registerKey("dwarfsiver_ore");
     public static final RegistryKey<PlacedFeature> DWARFRUBY_STONE = registerKey("dwarfruby_stone");
     public static final RegistryKey<PlacedFeature> HOBBIT_ORE_KEY = registerKey("hobbit_ore");
     public static final RegistryKey<PlacedFeature> ORC_STONE_KEY = registerKey("orc_stone");
@@ -32,7 +32,7 @@ public class PlacedFeatureInit {
     public static final RegistryKey<PlacedFeature> IRONWOOD_TREE_KEY = registerKey("ironwood_tree");
     public static final RegistryKey<PlacedFeature> EVIL_TREE_KEY = registerKey("evil_tree");
     public static final RegistryKey<PlacedFeature> SUNELF_TREE_KEY = registerKey("sunelf_tree");
-
+    public static final RegistryKey<PlacedFeature> DARKELF_TREE_KEY = registerKey("darkelf_tree");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -41,7 +41,7 @@ public class PlacedFeatureInit {
                 Modifiers.modifiersCount(9,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-24), YOffset.fixed(64))));
 
-        register(context, DWARFSIVER_ORE, registryLookup.getOrThrow(ConfiguredFeatureInit.DWARFSILVER_ORE),
+        register(context, DWARFSIVER_ORE, registryLookup.getOrThrow(ConfiguredFeatureInit.DWARFSIVER_ORE),
                 Modifiers.modifiersCount(9,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-24), YOffset.fixed(23))));
 
@@ -78,8 +78,10 @@ public class PlacedFeatureInit {
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(9, 0.2f, 3),
                         BlockInit.MITHRIL_SAPLING));
-
-
+        register(context, DARKELF_TREE_KEY, registryLookup.getOrThrow(ConfiguredFeatureInit.DARKELF_TREE_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                        PlacedFeatures.createCountExtraModifier(9, 0.2f, 3),
+                        BlockInit.DARKELF_SAPLING));
         register(context, SILVER_TREE_KEY, registryLookup.getOrThrow(ConfiguredFeatureInit.SILVER_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(20, 0.2f, 3),

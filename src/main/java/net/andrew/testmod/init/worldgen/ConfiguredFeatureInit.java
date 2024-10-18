@@ -12,8 +12,10 @@ import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.trunk.DarkOakTrunkPlacer;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 
 import java.util.List;
@@ -21,7 +23,7 @@ import java.util.List;
 public class ConfiguredFeatureInit {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> OVERWORLD_MITHRIL_ORE_KEY = registerKey("overworld_mithril_ore");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> DWARFSILVER_ORE = registerKey("dwarfsilver_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DWARFSIVER_ORE = registerKey("dwarfsiver_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DWARFRUBY_STONE = registerKey("dwarfruby_stone");
     public static final RegistryKey<ConfiguredFeature<?,  ?>> HOBBIT_ORE_KEY = registerKey("hobbit_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ORC_STONE_KEY = registerKey("orc_stone");
@@ -37,6 +39,8 @@ public class ConfiguredFeatureInit {
     public static final RegistryKey<ConfiguredFeature<?, ?>> IRONWOOD_TREE_KEY = registerKey("ironwood_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> EVIL_TREE_KEY = registerKey("evil_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SUNELF_TREE_KEY = registerKey("sunelf_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DARKELF_TREE_KEY = registerKey("darkelf_tree");
+
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneOreReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -46,7 +50,7 @@ public class ConfiguredFeatureInit {
 
         List<OreFeatureConfig.Target> overworldMithrilTargets = List.of(
                 OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.DWARFRUBY_STONE.getDefaultState()),
-                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.DWARFSILVER_ORE.getDefaultState()),
+                OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.DWARFSIVER_ORE.getDefaultState()),
                 OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.HOBBIT_ORE.getDefaultState()),
                 OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.ORC_STONE.getDefaultState()),
                 OreFeatureConfig.createTarget(stoneOreReplaceables, BlockInit.MITHRIL_ORE.getDefaultState()),
@@ -61,7 +65,7 @@ public class ConfiguredFeatureInit {
                 OreFeatureConfig.createTarget(endOreReplaceables, BlockInit.MORDOR_ORE.getDefaultState()));
 
         register(context, OVERWORLD_MITHRIL_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 9));
-        register(context, DWARFSILVER_ORE, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 12));
+        register(context, DWARFSIVER_ORE, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 12));
         register(context, DWARFRUBY_STONE, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 10));
         register(context, HOBBIT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 7));
         register(context, ORC_STONE_KEY, Feature.ORE, new OreFeatureConfig(overworldMithrilTargets, 10));
@@ -88,6 +92,16 @@ public class ConfiguredFeatureInit {
                 new DarkOakTrunkPlacer(4, 4, 6), // baseHeight, firstRandomHeight, secondRandomHeight
 
                 SimpleBlockStateProvider.of(BlockInit.SILVER_LEAVES), // leaves
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 2), // radius, offset, height
+
+                new TwoLayersFeatureSize(3, 0, 3) // limit, lowerSize, upperSize
+        ).build());
+
+        register(context, DARKELF_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                SimpleBlockStateProvider.of(BlockInit.DARKELF_LOG), // log
+                new StraightTrunkPlacer(3, 0, 3), // baseHeight, firstRandomHeight, secondRandomHeight
+
+                SimpleBlockStateProvider.of(BlockInit.DARKELF_LEAVES), // leaves
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 2), // radius, offset, height
 
                 new TwoLayersFeatureSize(3, 0, 3) // limit, lowerSize, upperSize

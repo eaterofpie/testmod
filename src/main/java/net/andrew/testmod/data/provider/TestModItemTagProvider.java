@@ -35,6 +35,8 @@ public class TestModItemTagProvider extends FabricTagProvider<Item> {
                 .add(BlockInit.IRONWOOD_LEAVES.asItem());
         getOrCreateTagBuilder(ItemTags.LEAVES)
                 .add(BlockInit.EVIL_LEAVES.asItem());
+        getOrCreateTagBuilder(ItemTags.LEAVES)
+                .add(BlockInit.DARKELF_LEAVES.asItem());
 
 
 
