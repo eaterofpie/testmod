@@ -49,6 +49,9 @@ public class TestModEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockInit.DWARF_STONE,"dwarf_stone");
         translationBuilder.add(BlockInit.DWARF_MOSSYSTONE, "dwarf_mossystone");
         translationBuilder.add(BlockInit.DWARF_LIME, "dwarf_lime");
+        translationBuilder.add(BlockInit.DWARF_LIMEBRICK, "dwarf_limebrick");
+        translationBuilder.add(BlockInit.DWARF_PUCE, "dwarf_puce");
+        translationBuilder.add(BlockInit.DWARF_ORTE, "dwarf_orte");
         translationBuilder.add(BlockInit.DWARFIRON_STONE, "dwarfiron_stone");
         translationBuilder.add(BlockInit.DWARF_COBBLE, "dwarf_cobble");
         translationBuilder.add(BlockInit.DWARFLOG, "dwarflog");
@@ -75,6 +78,7 @@ public class TestModEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockInit.ELFLOG,"elflog");
         translationBuilder.add(BlockInit.ELFMOSSY_STONE,"elfmossy_stone");
         translationBuilder.add(BlockInit.HOBBIT_ORE,"hobbit_ore");
+        translationBuilder.add(BlockInit.HOBBITMOSS, "hobbitmoss");
         translationBuilder.add(BlockInit.DARKELF_LOG, "darkelf_log");
 
     }

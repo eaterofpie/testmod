@@ -40,6 +40,10 @@
     "testmod:elflog",
     "testmod:elfmossy_stone",
     "testmod:dwarflog",
+    "testmod:dwarf_lime",
+    "testmod:dwarf_limebrick",
+    "testmod:dwarf_puce",
+    "testmod:dwarf_orte",
     "testmod:mordor_stone"
   ]
 }

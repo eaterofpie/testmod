@@ -60,6 +60,10 @@ public class TestModBlockLootTableProvider extends FabricBlockLootTableProvider 
         addDrop(BlockInit.ELFMOSSY_STONE);
         addDrop(BlockInit.DWARF_MOSSYSTONE);
         addDrop(BlockInit.DWARF_LIME);
+        addDrop(BlockInit.DWARF_LIMEBRICK);
+        addDrop(BlockInit.DWARF_PUCE);
+        addDrop(BlockInit.DWARF_ORTE);
+        addDrop(BlockInit.HOBBITMOSS);
 
 
     }

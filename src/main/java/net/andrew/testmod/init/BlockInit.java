@@ -56,6 +56,10 @@ public class BlockInit {
     public static final Block ELFMOSSY_STONE=registerWithItem("elfmossy_stone", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
     public static final Block DWARF_MOSSYSTONE = registerWithItem("dwarf_mossystone", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
     public static final Block DWARF_LIME=registerWithItem("dwarf_lime", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARF_LIMEBRICK=registerWithItem("dwarf_limebrick", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARF_PUCE=registerWithItem("dwarf_puce", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block DWARF_ORTE=registerWithItem("dwarf_orte", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
+    public static final Block HOBBITMOSS=registerWithItem("hobbitmoss", new PillarBlock(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().luminance(state -> 4)));
 
 
 

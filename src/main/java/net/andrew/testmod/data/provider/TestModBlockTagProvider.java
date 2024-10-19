@@ -57,6 +57,10 @@ public class TestModBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(BlockInit.ELFMOSSY_STONE)
                 .add(BlockInit.DWARFLOG)
                 .add(BlockInit.DWARF_LIME)
+                .add(BlockInit.DWARF_LIMEBRICK)
+                .add(BlockInit.DWARF_PUCE)
+                .add(BlockInit.DWARF_ORTE)
+                .add(BlockInit.HOBBITMOSS)
                 .add(BlockInit.MORDOR_STONE);
 
 
