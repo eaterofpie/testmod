@@ -8,7 +8,6 @@ import net.andrew.testmod.init.worldgen.Biome.BiomesInit;
 import net.andrew.testmod.init.worldgen.BiomeModificationInit;
 import net.andrew.testmod.sound.SoundsInit;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.biome.v1.BiomeModification;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
